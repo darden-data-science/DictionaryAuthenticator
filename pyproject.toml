@@ -1,0 +1,58 @@
+[build-system]
+# >=77 is required, not incidental: the PEP 639 bare-string `license` below is
+# rejected by setuptools 69-76 with an opaque "invalid project.license" error.
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DictionaryAuthenticator"
+dynamic = ["version"]
+description = "DictionaryAuthenticator: a JupyterHub Authenticator backed by a configured dict of username:password."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "BSD-3-Clause"
+authors = [
+  { name = "Michael Albert", email = "albertmichaelj@gmail.com" },
+]
+keywords = [
+  "authentication",
+  "jupyterhub",
+  "shared-accounts",
+]
+classifiers = [
+  "Framework :: Jupyter",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Education",
+  "Intended Audience :: System Administrators",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+  "jupyterhub>=4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/darden-data-science/DictionaryAuthenticator"
+Issues = "https://github.com/darden-data-science/DictionaryAuthenticator/issues"
+Source = "https://github.com/darden-data-science/DictionaryAuthenticator"
+
+[project.entry-points."jupyterhub.authenticators"]
+dictionary_authenticator = "DictionaryAuthenticator:DictionaryAuthenticator"
+
+[tool.setuptools]
+packages = ["DictionaryAuthenticator"]
+
+[tool.setuptools.dynamic]
+version = { attr = "DictionaryAuthenticator._version.__version__" }
