@@ -57,7 +57,7 @@ case the check is skipped entirely.
 
 ## Compatibility
 
-Python 3.9+, JupyterHub 4.x and 5.x.
+Python 3.10+, JupyterHub 4.x and 5.x.
 
 Passwords are compared with `secrets.compare_digest` rather than `==`. Both sides are encoded to
 UTF-8 first, because `compare_digest` raises `TypeError` on non-ASCII `str` — so a password with
