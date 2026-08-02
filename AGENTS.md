@@ -3,7 +3,7 @@
 # DictionaryAuthenticator
 
 **LIVE — do not delete.** Modernized 2026-08-02 to v1.0.0: PEP 621 packaging, dynamic version,
-GitHub Actions CI (py3.10–3.13), 18 tests, `jupyterhub>=4`, Python 3.9+.
+GitHub Actions CI (py3.10–3.13), 18 tests, `jupyterhub>=4`, Python 3.10+.
 
 It looks abandoned — one commit for five years, 18 lines of code. It is in production for the
 Executive Education cohort, which uses shared team logins rather than university SSO.
