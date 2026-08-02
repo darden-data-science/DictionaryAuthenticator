@@ -17,13 +17,13 @@ equality check.
 **My half of the contract:** none. No wire protocol. One trait, `passwords`.
 
 **Who consumes me:** pip-installed from this GitHub default branch, **unpinned**, by
-`images/hub/Dockerfile:10` in `darden-data-science/jupyterhub-config`. Selected by
+`images/hub/Dockerfile:10` in `darden-data-science/jupyterhub-config-darden`. Selected by
 `config_files/exec-ed/values.yaml:54` as `authenticator_class:
 DictionaryAuthenticator.DictionaryAuthenticator` — that cohort's `values.yaml` layers last, so it
 wins over the `authType: dummy` the master helmfile passes it.
 
 **Full system map:** `/Users/Michael/Documents/Git Projects/Darden Jupyterhub/docs/SYSTEM-MAP.md`
-(repo `darden-data-science/jupyterhub-config`, private).
+(repo `darden-data-science/jupyterhub-config-darden`, private).
 
 ## Known issues
 
