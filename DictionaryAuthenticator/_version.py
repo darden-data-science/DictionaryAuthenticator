@@ -11,7 +11,7 @@ release needs.
 version_info = (
     1,
     0,
-    0,
+    1,
     # 'dev',  # uncomment this line for a development version
 )
 __version__ = '.'.join(map(str, version_info[:3]))
